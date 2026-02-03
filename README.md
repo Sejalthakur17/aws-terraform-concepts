@@ -62,9 +62,35 @@ Allow SSH (22) from your IP
    chmod 400 manual-key.pem
    ssh -i ec2-key.pem ec2-user@<PUBLIC_IP>
 
-   
+Part 3: Terraform
 
+Terraform : Terraform is an Infrastructure as Code (IaC) tool developed by HashiCorp. It allows users to define and provision cloud infrastructure using code instead of manually creating resources
+through the AWS Console. Terraform works with multiple cloud providers, making it cloud-agnostic.
 
+Infrastructure as Code (IaC) : Infrastructure as Code means managing infrastructure (servers, networks, storage) using configuration files.
+
+Terraform Workflow
+
+Terraform follows a standard workflow to manage infrastructure.
+
+1. terraform init
+Initializes the Terraform project
+Downloads required provider plugins
+Prepares the working directory
+
+2. terraform plan
+Shows an execution plan
+Displays what resources will be created, modified, or destroyed
+Helps verify changes before applying
+
+3. terraform apply
+Creates or updates resources in the cloud
+Asks for user confirmation before execution
+Applies the planned changes
+
+4. terraform destroy
+Deletes all resources created by Terraform
+Used to clean up infrastructure and avoid unnecessary costs
 
 
 
